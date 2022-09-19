@@ -13,11 +13,11 @@ export function Aplicacion() {
         </Link>
         <Link to="/">Home</Link>
         <br />
-        <Link to="movie">Movie</Link>
+        <Link to="movies">Movie</Link>
       </header>
       <main>
         <Routes>
-          <Route path="/movie/:movieId" element={<MovieDetails />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
       </main>
