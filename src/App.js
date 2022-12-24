@@ -1,12 +1,12 @@
-import React from"react";
-import './App.css';
-import {Aplicacion} from "./componentes/Aplicacion";
+import React from "react";
+import "./App.css";
+import { Aplicacion } from "./componentes/Aplicacion";
 
 function App() {
   return (
-  <>
-  <Aplicacion/>
-  </>
+    <>
+      <Aplicacion />
+    </>
   );
 }
 

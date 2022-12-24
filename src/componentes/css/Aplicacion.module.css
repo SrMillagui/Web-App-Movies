@@ -1,4 +1,178 @@
-.titulo{
-   text-align: center;
-   
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400&family=Roboto:wght@300&family=Rubik+Vinyl&family=Rubik:wght@400;500;700&display=swap");
+
+header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  /*border: solid white;*/
+  background-color: rgb(37, 30, 1, 0.5);
+  overflow: hidden;
+ 
+}
+nav {
+  display: flex;
+  position: absolute;
+  right: 0;
+  /* border: solid rgb(205, 245, 86);*/
+  width: 42%;
+  min-width: 40%;
+  gap: 15px;
+}
+
+.titulo {
+  font-family: "Rubik Vinyl", cursive;
+  margin-right: 30px;
+  margin-left: 30px;
+  text-shadow: 0 0 5px rgba(249, 247, 247, 0.5), 0 0 10px rgba(247, 244, 214, 0.5),
+    0 0 15px rgba(242, 244, 114, 0.5);
+}
+
+
+.login {
+  margin-left: 35px;
+  padding-left: 25px;
+}
+
+/*Animation*/
+.luzUno {
+  position: absolute;
+  font-family: "Rubik Vinyl", cursive;
+  font-size: 100pt;
+  opacity: 0.2;
+  animation-name: popcorn;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.luzUno {
+  animation: rotar 8s linear infinite;
+  -webkit-animation: rotar 8s linear infinite;
+}
+
+/*Hamburguer Menu*/
+@keyframes desplazamiento {
+  0% {opacity: 0; left: 2000px}
+  100% {opacity: 1; left: 0px}
+  }
+  
+  .bob{
+  display: flex;
+  flex-direction: column;
+  /*transform: translate(-2000px);*/
+  position:absolute;
+  z-index: 100;
+  animation-name: desplazamiento;
+  animation-duration: 1s;
+  width: 50%;
+  height: 100%;
+  }
+  
+  .bob a {
+  background: rgb(33, 33, 85);
+  opacity: 5;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: antiquewhite;
+  justify-items: center;
+  position: relative;
+  align-content: center;
+  padding-top: 75px;
+  }
+  
+  .bob a:hover {
+  background-color: rgb(88, 89, 4);
+  opacity: 5;
+  }
+  
+  .bob.visible {
+    display: flex;
+  }
+  /*Hamburguer button*/
+
+  button{
+  background-color: rgb(244, 242, 242, 0.7);
+  position:absolute;
+  display: none;
+  flex-direction: column;
+  width: 3rem;
+  height: 3rem;
+  border:0;
+  padding: 5px;
+  z-index: 99;
+  border-radius: 50%;
+  left: 90%;
+  margin-right: 50px;
+  
+  }
+  
+  button > div {
+  background: black;
+  height: 3px;
+  width: 95%;
+  border-radius: 5px;
+  transition: all 1s;
+  transform-origin: left;
+  margin-top: 7px;
+  }
+  
+  button:hover div:first-child {
+  transform: translateX(17px) translateY(-5px)   rotate(45deg);
+  
+}
+  
+  button:hover div:nth-child(2){
+    transform:  translateX(20px) translateY(-15px)  rotate(135deg);
+  
+} 
+  
+  button:hover div:last-child{
+  transform: translateX(36px)  rotate(-180deg);
+  
+}
+  
+  
+
+/*Query zone*/
+@media (max-width:1440px){
+  nav{
+    display:none;
+  }
+
+  
+  button{
+    display:flex
+  }
+}
+
+@media (max-width:656px){
+  .titulo{
+    font-size: 13pt;
+    margin-right: 13px;
+    margin-left: 23px;
+  }
+
+  header{
+    height: 85px;
+  }
+
+  button{
+    left: 81%;
+  }
 }

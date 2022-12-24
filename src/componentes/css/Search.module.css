@@ -1,10 +1,12 @@
 .searchConteiner {
   display: flex;
   justify-content: center;
+  
 }
 
 .searchBox {
   position: relative;
+ 
 }
 
 .searchInput {
@@ -27,6 +29,7 @@
   border: none;
   background: none;
   height: 100%;
+  
 }
 
 .searchInput:focus,
@@ -34,4 +37,13 @@
   outline: none;
   border: 1px solid rgb(248, 251, 220);
   box-shadow: 0 0 5px rgb(248, 251, 220);
+}
+
+@media (max-width:656px){
+  .searchBox{
+    width: 90px;
+  }
+  .searchInput{
+    width: 90px;
+  }
 }
