@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SrMillagui/moviesdud.git/static/css/main.0cf2a2fd.css",
+    "main.js": "/SrMillagui/moviesdud.git/static/js/main.3d334f3d.js",
+    "static/js/787.8e093076.chunk.js": "/SrMillagui/moviesdud.git/static/js/787.8e093076.chunk.js",
+    "index.html": "/SrMillagui/moviesdud.git/index.html",
+    "main.0cf2a2fd.css.map": "/SrMillagui/moviesdud.git/static/css/main.0cf2a2fd.css.map",
+    "main.3d334f3d.js.map": "/SrMillagui/moviesdud.git/static/js/main.3d334f3d.js.map",
+    "787.8e093076.chunk.js.map": "/SrMillagui/moviesdud.git/static/js/787.8e093076.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cf2a2fd.css",
+    "static/js/main.3d334f3d.js"
+  ]
+}
