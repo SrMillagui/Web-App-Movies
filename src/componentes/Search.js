@@ -1,5 +1,4 @@
 /*import React, { useEffect, useState } from "react";*/
-import { FaSearch } from "react-icons/fa";
 import styles from "./css/Search.module.css";
 /*import { useSearchParams } from "react-router-dom";*/
 import { useSearchParams } from "react-router-dom";

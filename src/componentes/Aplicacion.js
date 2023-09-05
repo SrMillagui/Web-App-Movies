@@ -13,18 +13,34 @@ import Search from "./Search";
 import { FaUserAstronaut } from "react-icons/fa";
 import React, { useState } from 'react';
 
-export function Aplicacion() {
+ 
+  function PageWrapper(props) {
+    
+    function handleClick(event) {
+      if (event.target.tagName !== 'BUTTON') {
+        props.setVisible(false);
+      } 
+      
+    }
 
-  const [visible, setVisible] = useState(false);
-
-  function handleClick() {
-    setVisible(true);
+    return (
+      <div onClick={handleClick}>
+        {props.children}
+      </div>
+    );
   }
 
 
+  export function Aplicacion() {
+    const [visible, setVisible] = useState(false);
+  
+    function handleClick() {
+      setVisible(!visible);
+    }
+
   return (
     <Router>
-      <header>
+      <header onClick={handleClick}>
         <Link to="/">
           <h1 className={styles.titulo}>MoviesDud</h1>
         </Link>
@@ -61,34 +77,36 @@ export function Aplicacion() {
         </button>
       </header>
 
-      {visible ? (
-  <div className={styles.bob}>
-    <Link to="movies" className={styles.bob}>
-      {" "}
-      Home{" "}
-    </Link>
-    <Link to="movies" className={styles.bob}>
-      {" "}
-      Top{" "}
-    </Link>
-    <Link to="movies" className={styles.bob}>
-      {" "}
-      Releases{" "}
-    </Link>
-    <Link to="movies" className={styles.bob}>
-      {" "}
-      Action{" "}
-    </Link>
-    <Link to="movies" className={styles.bob}>
-      {" "}
-      Animation{" "}
-    </Link>
-    <Link to="movies" className={styles.bob}>
-      {" "}
-      War{" "}
-    </Link>
-  </div>
-) : null}
+      <PageWrapper setVisible={setVisible}>
+        {visible ? (
+          <div className={styles.bob}>
+            <Link to="movies" className={styles.bob}>
+              {" "}
+              Home{" "}
+            </Link>
+            <Link to="movies" className={styles.bob}>
+              {" "}
+              Top{" "}
+            </Link>
+            <Link to="movies" className={styles.bob}>
+              {" "}
+              Releases{" "}
+            </Link>
+            <Link to="movies" className={styles.bob}>
+              {" "}
+              Action{" "}
+            </Link>
+            <Link to="movies" className={styles.bob}>
+              {" "}
+              Animation{" "}
+            </Link>
+            <Link to="movies" className={styles.bob}>
+              {" "}
+              War{" "}
+            </Link>
+          </div>
+        ) : null}
+      </PageWrapper>
      
       <main>
         <Routes>
